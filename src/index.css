@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-ink-950 text-zinc-100 antialiased;
+    font-family:
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      Segoe UI,
+      Roboto,
+      Helvetica,
+      Arial,
+      'Apple Color Emoji',
+      'Segoe UI Emoji';
+    letter-spacing: 0.2px;
+  }
+
+  ::selection {
+    background: rgba(168, 85, 247, 0.35);
+  }
+}
+
+@layer components {
+  .ss-container {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+
+  .ss-panel {
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-xl;
+  }
+
+  .ss-panel-inner {
+    @apply p-4 sm:p-6;
+  }
+
+  .ss-title {
+    @apply text-2xl sm:text-3xl font-semibold tracking-tight;
+  }
+
+  .ss-subtitle {
+    @apply text-sm text-zinc-300/80;
+  }
+
+  .ss-btn {
+    @apply inline-flex select-none items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-medium transition;
+  }
+
+  .ss-btn-primary {
+    @apply ss-btn border border-fuchsia-200/25 bg-gradient-to-b from-fuchsia-400/30 via-violet-500/20 to-cyan-500/10 shadow-glow hover:border-fuchsia-200/40 hover:bg-white/10;
+  }
+
+  .ss-btn-ghost {
+    @apply ss-btn border border-white/10 bg-white/[0.03] hover:bg-white/[0.07];
+  }
+
+  .ss-kbd {
+    @apply rounded-md border border-white/10 bg-white/5 px-1.5 py-0.5 font-mono text-xs text-zinc-200/80;
+  }
+
+  .ss-codeblock {
+    @apply whitespace-pre-wrap break-words rounded-xl border border-white/10 bg-black/30 p-4 font-mono text-xs leading-relaxed text-zinc-100/90;
+  }
+}
