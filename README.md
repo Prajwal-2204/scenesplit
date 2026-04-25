@@ -165,3 +165,14 @@ export default defineConfig([
   },
 ])
 ```
+
+## 📸 Demo
+
+### Scene Input & UI
+![UI](screenshots/demo1.png)
+
+### Scene Breakdown Output
+![Scene Breakdown](screenshots/demo2.png)
+
+### Shot List Generation
+![Shot List](screenshots/demo3.png)
